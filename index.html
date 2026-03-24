@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Landing Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: lightblue;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        ul li {
+            margin: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        ul li a:hover {
+            color: red;
+        }
+
+        /* Sections */
+        section {
+            height: 100vh;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        #home {
+            background-color: lightpink;
+        }
+
+        #about {
+            background-color: lightgreen;
+        }
+
+        #contact {
+            background-color: lightyellow;
+        }
+
+        /* Mobile view */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="nav">
+        <div class="logo">My Website</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">
+        <h1>Welcome</h1>
+        <p>This is my first landing page.</p>
+    </section>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <p>I am learning web development.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>Email: myemail@gmail.com</p>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("nav");
+
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = "gray";
+            } else {
+                navbar.style.backgroundColor = "lightblue";
+            }
+        };
+    </script>
+
+</body>
+</html>
